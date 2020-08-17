@@ -4,14 +4,18 @@ import 'package:flutter/services.dart';
 import 'package:timeline/bloc_provider.dart';
 import 'package:timeline/colors.dart';
 import 'package:timeline/main_menu/main_menu.dart';
+import 'najva.dart';
 
 /// The app is wrapped by a [BlocProvider]. This allows the child widgets
 /// to access other components throughout the hierarchy without the need
 /// to pass those references around.
 class TimelineApp extends StatelessWidget {
+  Najva najva;
+
   @override
   Widget build(BuildContext context) {
     SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+    najva = new Najva();
     return BlocProvider(
       child: MaterialApp(
         title: 'History & Future of Everything',
